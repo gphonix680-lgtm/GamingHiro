@@ -3,306 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GamingHiro - FF Diamond Top Up Sri Lanka</title>
+    <title>GamingHiro - FF Diamond Top Up</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: linear-gradient(135deg, #1a0033, #4a0080, #1a0033);
+            background: linear-gradient(180deg, #2d1b69 0%, #1a0033 100%);
             color: white;
             font-family: 'Arial', sans-serif;
-            padding: 10px;
+            padding: 15px;
         }
-        .container {
-            max-width: 650px;
-            margin: 0 auto;
-        }
+        .container { max-width: 500px; margin: 0 auto; }
         .header {
-            background: rgba(255, 215, 0, 0.1);
+            background: rgba(45, 27, 105, 0.6);
             border: 2px solid #FFD700;
             padding: 20px;
             border-radius: 15px;
             text-align: center;
             margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
-        h1 { color: #FFD700; font-size: 2rem; margin-bottom: 5px; }
-        h2 { 
-            color: #FFD700; 
-            font-size: 1.3rem; 
-            margin: 20px 0 10px 0;
-            padding: 10px;
-            background: rgba(255, 215, 0, 0.1);
-            border-left: 4px solid #FFD700;
-            border-radius: 5px;
-        }
+        h1 { color: #FFD700; font-size: 1.8rem; margin-bottom: 8px; }
+        .subtitle { font-size: 0.95rem; line-height: 1.5; }
         .ad-box {
             border: 2px dashed #FFD700;
-            padding: 20px;
+            padding: 25px;
             margin: 15px 0;
-            border-radius: 10px;
+            border-radius: 12px;
             background: rgba(255, 215, 0, 0.05);
             text-align: center;
-            min-height: 90px;
+            color: #ccc;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin: 15px 0;
-        }
-        .card {
-            background: rgba(106, 27, 154, 0.3);
-            border: 2px solid #9c27b0;
-            padding: 15px;
+        .diamond-card {
+            background: rgba(45, 27, 105, 0.5);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            padding: 15px 20px;
             border-radius: 12px;
-            text-align: center;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
         }
-        .card-title { font-size: 0.9rem; margin-bottom: 8px; font-weight: bold; }
+        .diamond-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            color: #00d9ff;
+        }
+        .price-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
         .price {
-            background: linear-gradient(45deg, #FFD700, #FF8C00);
-            color: #000;
-            padding: 8px;
-            border-radius: 20px;
+            color: #FFD700;
             font-weight: bold;
-            margin: 8px 0;
+            font-size: 1.1rem;
         }
-        .btn {
-            background: #6a1b9a;
-            color: white;
-            padding: 10px;
+        .btn-buy {
+            background: #FFD700;
+            color: #000;
+            padding: 8px 20px;
             border-radius: 8px;
             text-decoration: none;
-            display: block;
             font-weight: bold;
-            border: 2px solid #FFD700;
-            margin-top: 8px;
             transition: 0.3s;
         }
-        .btn:hover { background: #8e24aa; transform: scale(1.05); }
-        .btn-vip { background: linear-gradient(45deg, #FFD700, #FF8C00); color: #000; }
-        .payment-box {
-            background: rgba(0, 0, 0, 0.3);
-            border: 2px solid #6a1b9a;
-            padding: 15px;
-            margin: 20px 0;
+        .btn-buy:hover { background: #ffed4a; }
+        .section-title {
+            color: #FFD700;
+            font-size: 1.3rem;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .membership-box {
+            background: rgba(45, 27, 105, 0.5);
+            border: 2px solid #9c27b0;
+            padding: 20px;
             border-radius: 15px;
-        }
-        .uid-box {
-            background: rgba(255, 215, 0, 0.1);
-            border: 2px solid #FFD700;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
+            margin: 12px 0;
             text-align: center;
         }
-        .uid-input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
+        .membership-box-vip {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 140, 0, 0.2));
             border: 2px solid #FFD700;
-            background: #1a0033;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        .membership-title { 
+            font-size: 1.3rem; 
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .membership-features {
+            font-size: 0.85rem;
+            margin: 12px 0;
+            line-height: 1.8;
+            text-align: left;
+        }
+        .btn-normal {
+            background: #9c27b0;
             color: white;
-            font-size: 1rem;
-            margin: 10px 0;
-            text-align: center;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 8px;
+            border: 2px solid #FFD700;
         }
-        @media (max-width: 500px) { .grid { grid-template-columns: 1fr; } }
+        .btn-vip {
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+            border: 2px solid white;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Ad 1: Top -->
-        <div class="ad-box">Your Ad Here - 728x90</div>
-        
         <div class="header">
             <h1>💎 GamingHiro 💎</h1>
-            <p>⚡ Instant FF Diamond Top Up | 24/7 Service<br>📱 WhatsApp: 077 028 0317</p>
-        </div>
-
-        <!-- User ID Input -->
-        <div class="uid-box">
-            <h2 style="border:none;background:none;margin:0;padding:0;">🎮 Enter Free Fire UID</h2>
-            <p style="font-size:0.85rem;margin:8px 0;">Singapore Region UID එකක් දාන්න</p>
-            <input type="text" class="uid-input" placeholder="Enter Your Free Fire UID">
-            <a href="https://wa.me/94770280317?text=My+UID+is+" class="btn">✅ Check Username</a>
-        </div>
-
-        <!-- Top Selling -->
-        <h2>⭐ Top Selling</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-title">WEEKLY LITE</div>
-                <div class="price">Rs. 120</div>
-                <a href="https://wa.me/94770280317?text=Weekly+Lite+Rs.120+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">WEEKLY</div>
-                <div class="price">Rs. 520</div>
-                <a href="https://wa.me/94770280317?text=Weekly+Rs.520+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">MONTHLY</div>
-                <div class="price">Rs. 2590</div>
-                <a href="https://wa.me/94770280317?text=Monthly+Rs.2590+Order" class="btn">Order Now</a>
+            <div class="subtitle">
+                Fastest FF Diamond Top Up in Sri Lanka<br>
+                ⚡ 5 Minutes Delivery | 24/7 Service
             </div>
         </div>
 
-        <!-- Ad 2: Middle -->
-        <div class="ad-box">Your Ad Here - 300x250</div>
-
-        <!-- Popular Membership -->
-        <h2>👑 Popular Membership</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-title">Little Pack</div>
-                <div class="price">Rs. 1280</div>
-                <a href="https://wa.me/94770280317?text=Little+Pack+Rs.1280+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">VIP PACK</div>
-                <div class="price">Rs. 3100</div>
-                <a href="https://wa.me/94770280317?text=VIP+Pack+Rs.3100+Order" class="btn btn-vip">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">VIP SPECIAL</div>
-                <div class="price">Rs. 3210</div>
-                <a href="https://wa.me/94770280317?text=VIP+Special+Rs.3210+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">BIG PACK</div>
-                <div class="price">Rs. 4650</div>
-                <a href="https://wa.me/94770280317?text=Big+Pack+Rs.4650+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">SUPER VIP</div>
-                <div class="price">Rs. 6200</div>
-                <a href="https://wa.me/94770280317?text=Super+VIP+Rs.6200+Order" class="btn btn-vip">Order Now</a>
-            </div>
-        </div>
+        <!-- Ad 1: Top -->
+        <div class="ad-box">Your Ad Here - 728x90</div>
 
         <!-- Diamond Packages -->
-        <h2>💎 Diamond Packages</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-title">Diamond x 25</div>
-                <div class="price">Rs. 80</div>
-                <a href="https://wa.me/94770280317?text=25+Diamonds+Rs.80+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Diamond x 100</div>
-                <div class="price">Rs. 300</div>
-                <a href="https://wa.me/94770280317?text=100+Diamonds+Rs.300+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Diamond x 310</div>
-                <div class="price">Rs. 890</div>
-                <a href="https://wa.me/94770280317?text=310+Diamonds+Rs.890+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Diamond x 520</div>
-                <div class="price">Rs. 1450</div>
-                <a href="https://wa.me/94770280317?text=520+Diamonds+Rs.1450+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Diamond x 1060</div>
-                <div class="price">Rs. 2880</div>
-                <a href="https://wa.me/94770280317?text=1060+Diamonds+Rs.2880+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Diamond x 2180</div>
-                <div class="price">Rs. 5800</div>
-                <a href="https://wa.me/94770280317?text=2180+Diamonds+Rs.5800+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Diamond x 3000</div>
-                <div class="price">Rs. 7750</div>
-                <a href="https://wa.me/94770280317?text=3000+Diamonds+Rs.7750+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Diamond x 5000</div>
-                <div class="price">Rs. 12920</div>
-                <a href="https://wa.me/94770280317?text=5000+Diamonds+Rs.12920+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Diamond x 8000</div>
-                <div class="price">Rs. 20690</div>
-                <a href="https://wa.me/94770280317?text=8000+Diamonds+Rs.20690+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Diamond x 10000</div>
-                <div class="price">Rs. 25850</div>
-                <a href="https://wa.me/94770280317?text=10000+Diamonds+Rs.25850+Order" class="btn">Order Now</a>
+        <div class="diamond-card">
+            <div class="diamond-info">💎 100 Diamonds</div>
+            <div class="price-section">
+                <span class="price">Rs. 300</span>
+                <a href="https://wa.me/94770280317?text=100+Diamonds+Rs.300+Order" class="btn-buy">Buy</a>
             </div>
         </div>
 
-        <!-- E Badge -->
-        <h2>🏅 E-Badge / Evo Access</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-title">Evo Access 3D</div>
-                <div class="price">Rs. 180</div>
-                <a href="https://wa.me/94770280317?text=Evo+Access+3D+Rs.180+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Evo Access 7D</div>
-                <div class="price">Rs. 300</div>
-                <a href="https://wa.me/94770280317?text=Evo+Access+7D+Rs.300+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Evo Access 30D</div>
-                <div class="price">Rs. 900</div>
-                <a href="https://wa.me/94770280317?text=Evo+Access+30D+Rs.900+Order" class="btn">Order Now</a>
+        <div class="diamond-card">
+            <div class="diamond-info">💎 310 Diamonds</div>
+            <div class="price-section">
+                <span class="price">Rs. 900</span>
+                <a href="https://wa.me/94770280317?text=310+Diamonds+Rs.900+Order" class="btn-buy">Buy</a>
             </div>
         </div>
 
-        <!-- Level Up Pass -->
-        <h2>🚀 Level Up Pass</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-title">Level Up (Lvl 6+)</div>
-                <div class="price">Rs. 150</div>
-                <a href="https://wa.me/94770280317?text=Level+Up+6+Rs.150+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Level Up (Lvl 10+)</div>
-                <div class="price">Rs. 250</div>
-                <a href="https://wa.me/94770280317?text=Level+Up+10+Rs.250+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Level Up (Lvl 15+)</div>
-                <div class="price">Rs. 250</div>
-                <a href="https://wa.me/94770280317?text=Level+Up+15+Rs.250+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Level Up (Lvl 20+)</div>
-                <div class="price">Rs. 250</div>
-                <a href="https://wa.me/94770280317?text=Level+Up+20+Rs.250+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Level Up (Lvl 25+)</div>
-                <div class="price">Rs. 250</div>
-                <a href="https://wa.me/94770280317?text=Level+Up+25+Rs.250+Order" class="btn">Order Now</a>
-            </div>
-            <div class="card">
-                <div class="card-title">Level Up (Lvl 30+)</div>
-                <div class="price">Rs. 350</div>
-                <a href="https://wa.me/94770280317?text=Level+Up+30+Rs.350+Order" class="btn">Order Now</a>
+        <div class="diamond-card">
+            <div class="diamond-info">💎 520 Diamonds</div>
+            <div class="price-section">
+                <span class="price">Rs. 1500</span>
+                <a href="https://wa.me/94770280317?text=520+Diamonds+Rs.1500+Order" class="btn-buy">Buy</a>
             </div>
         </div>
 
-        <!-- Payment Methods -->
-        <div class="payment-box">
-            <h2 style="border:none;background:none;margin:0 0 10px 0;">💳 Payment Methods</h2>
-            <p style="text-align:center;margin-bottom:15px;">Order දාන්න කලින් Payment කරන්න</p>
-            <a href="https://wa.me/94770280317?text=EZ+Cash+Payment" class="btn">💜 EZ Cash: 0770280317</a>
-            <a href="https://wa.me/94770280317?text=Genie+Payment" class="btn">💙 Genie Available</a>
-            <a href="https://wa.me/94770280317?text=Lanka+QR+Payment" class="btn">💚 Lanka QR Available</a>
-            <p style="font-size:0.85rem;margin-top:10px;text-align:center;">Payment කරලා Screenshot එක WhatsApp කරන්න</p>
+        <div class="diamond-card">
+            <div class="diamond-info">💎 1060 Diamonds</div>
+            <div class="price-section">
+                <span class="price">Rs. 3000</span>
+                <a href="https://wa.me/94770280317?text=1060+Diamonds+Rs.3000+Order" class="btn-buy">Buy</a>
+            </div>
         </div>
 
-        <!-- Ad 3: Bottom -->
-        <div class="ad-box">Your Ad Here - 728x90</div>
-        
-        <p style="text-align:center;margin:20px 0;font-size:0.9rem;">© 2026 GamingHiro | Fast & Trusted Top Up Service</p>
+        <div class="diamond-card">
+            <div class="diamond-info">💎 2180 Diamonds</div>
+            <div class="price-section">
+                <span class="price">Rs. 6000</span>
+                <a href="https://wa.me/94770280317?text=2180+Diamonds+Rs.6000+Order" class="btn-buy">Buy</a>
+            </div>
+        </div>
+
+        <div class="diamond-card">
+            <div class="diamond-info">💎 5600 Diamonds</div>
+            <div class="price-section">
+                <span class="price">Rs. 15000</span>
+                <a href="https://wa.me/94770280317?text=5600+Diamonds+Rs.15000+Order" class="btn-buy">Buy</a>
+            </div>
+        </div>
+
+        <!-- Membership Section -->
+        <div class="section-title">⭐ Membership Plans</div>
+
+        <!-- Normal Membership -->
+        <div class="membership-box">
+            <div class="membership-title">🥉 Normal Membership</div>
+            <div class="price" style="font-size:1.2rem;margin:8px 0;">Rs. 250/month</div>
+            <div class="membership-features">
+                ✅ 5% Discount on All Diamonds<br>
+                ✅ Fast Delivery Priority<br>
+                ✅ Monthly Lucky Draw Entry
+            </div>
+            <a href="https://wa.me/94770280317?text=Normal+Membership+Join+Rs.250" class="btn-normal">Join Normal</a>
+        </div>
+
+        <!-- VIP Membership -->
+        <div class="membership-box membership-box-vip">
+            <div class="membership-title">👑 VIP Membership</div>
+            <div class="price" style="font-size:1.3rem;margin:10px 0;">Rs. 500/month</div>
+            <div class="membership-features">
+                ✅ 10% Discount on All Diamonds<br>
+                ✅ Instant Priority Delivery<br>
+                ✅ Exclusive Giveaways & Events<br>
+                ✅ 24/7 VIP WhatsApp Support<br>
+                ✅ Early Access to New Offers
+            </div>
+            <a href="https://wa.me/94770280317?text=VIP+Membership+Join+Rs.500" class="btn-vip">Join VIP Now</a>
+        </div>
+
+        <!-- Ad 2: Bottom -->
+        <div class="ad-box">Your Ad Here - 300x250</div>
     </div>
 </body>
-                    </html>
+</html>
